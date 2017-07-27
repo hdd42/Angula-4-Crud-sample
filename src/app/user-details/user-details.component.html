@@ -1,0 +1,22 @@
+
+<div class="card mt-5">
+  <div class="card-header">
+    {{user?.name}}
+  </div>
+  <div class="card-block">
+    <strong>{{user?.email}}</strong>
+    <p class="card-text">
+      Kayit : {{user?.createdAt|date}}</p>
+
+  </div>
+  <div class="card-footer text-muted card-outline-danger">
+
+    <button  (click)="deleteUser()" *ngIf="operation=='sil'"  class="btn btn-sm btn-outline-danger" >
+      <span class="fa fa-close"></span>
+      Sil</button>
+
+    <button  (click)="close()"  class="btn btn-sm btn-outline-warning" >
+      <span class="fa fa-close"></span>
+      Kapat</button>
+  </div>
+</div>

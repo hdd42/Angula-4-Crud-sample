@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-8">
+
+    <h3>Kullanicilar</h3>
+
+    <table class="table table-sm table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>ID</th>
+        <th>Isim</th>
+
+        <th>Aktif</th>
+        <th>Rol</th>
+        <th>Islemler</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <ng-container *ngIf="users; else loading" >
+        <tr user-item *ngFor="let user of users; index as _index" [user]="user" [index]="_index" (userSelectedEvent)="setSelectedUser($event)">
+        </tr>
+      </ng-container>
+      </tbody>
+
+    </table>
+    <ngb-pagination (pageChange)="paginate(page)" [collectionSize]="pagination?.count" [(page)]="page" maxSize="10" size="sm" aria-label="Default pagination"></ngb-pagination>
+
+  </div>
+
+  <div class="col-4" *ngIf="selectedUser">
+    <app-user-details [user]="selectedUser" [operation]="operation" (closeDetailsEvent)="close($event)"></app-user-details>
+  </div>
+
+</div>
+
+
+
+<ng-template #loading>
+  <tr>
+    <td width="100%" colspan="7">
+      Kullanicilar Yukleniyor
+    </td>
+  </tr>
+</ng-template>

@@ -1,0 +1,40 @@
+<div class="row">
+  <div [ngClass]="{'col-md-8 offset-2':isEdit, 'col-md-12':!isEdit}">
+    <div class="card">
+      <div class="card-header">
+        {{title}}
+      </div>
+      <div class="card-block">
+
+        <form [formGroup]="userForm" (ngSubmit)="handleForm()" novalidate>
+          <div class="form-group">
+            <label >Isim</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Isim Soyad">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" formControlName="email"  placeholder="Email">
+          </div>
+
+          <div class="form-group">
+            <label>Kullanici Aktifmi?</label> <br>
+            <input type="checkbox" formControlName="active" value="true" > Evet
+
+          </div>
+
+          <div class="form-group">
+            <label>Kullanici Rolu?</label> <br>
+            <input type="radio" formControlName="role" value="Admin" > Admin
+            <input type="radio" formControlName="role" value="Member"> Kullanici
+            <input type="radio" formControlName="role" value="Staff"> Calisan
+            <input type="radio" formControlName="role" value="Customer"> Musteri
+          </div>
+
+          <button [disabled]="!userForm.valid" class="btn btn-outline-primary btn-sm">{{isEdit ? 'Kaydet' : 'Ekle'}}</button>
+          <button (click)="cancelForm()" class="btn btn-outline-warning btn-sm">Iptal</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
