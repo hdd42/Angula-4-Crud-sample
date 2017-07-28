@@ -29,6 +29,7 @@ export class UserDetailsComponent implements OnInit {
     this._userService.deleteUser(this.user)
       .subscribe(_res => {
         this.close(this.user)
+        this._messageService.sendMessage({text:'Kullanici basariyla silindi', type:'success'})
       },
         (err) => {
          this._messageService.closeModal();

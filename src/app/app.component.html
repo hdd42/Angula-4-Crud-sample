@@ -1,13 +1,14 @@
 <app-ust-menu></app-ust-menu>
 <div class="container ust">
-<div class="row">
-  <div class="col-md-12">
-    <ngb-alert *ngIf="showMessage" [type]="message.type" (close)="showMessage=!showMessage">{{ message.text}}</ngb-alert>
-  </div>
-</div>
+
   <router-outlet></router-outlet>
 
-</div><!-- /.container -->
 
+  <div class="row">
+    <div class="col-md-12">
+      <ngb-alert *ngIf="showMessage" [type]="message.type" (close)="showMessage=!showMessage">{{ message.text}}</ngb-alert>
+    </div>
+  </div>
+</div><!-- /.container -->
 
 
