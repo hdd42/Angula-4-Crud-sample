@@ -94,7 +94,7 @@ export class UserFormComponent implements OnInit {
   }
 
   cancelForm(){
-    this.isEdit ? this.router.navigate(['/']) : ''
+    this.isEdit ? this.router.navigate(['/']) : this._messageService.closeModal();
   }
 
 }

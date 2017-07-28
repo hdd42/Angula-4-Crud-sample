@@ -1,6 +1,16 @@
-# Crud
+# Angular 4 Crud / kayit ekle sil guncelle ornek 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
+repo yu kopyaladiktan yada zip olarak indridikten sonra 
+`npm install`
+&
+`ng serve`
+
+Daha sonra tarayicida asagidaki adresi ziyaret edebilirsiniz: 
+
+##  http://localhost:4200/
+
+Demo halini asagidaki adreste gorebilirisiniz
+## http://165.227.135.69/
 
 ## Development server
 
