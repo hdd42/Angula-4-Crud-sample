@@ -9,7 +9,8 @@ Daha sonra tarayicida asagidaki adresi ziyaret edebilirsiniz:
 
 ##  http://localhost:4200/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
+Demo halini asagidaki adreste gorebilirisiniz
+## http://165.227.135.69/
 
 ## Development server
 
