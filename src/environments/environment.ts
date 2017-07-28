@@ -3,7 +3,9 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
+/** Gelistirme -dev- ortamina ai ayar ve on tnaimlar*/
 export const environment = {
   production: false,
-  API:"http://localhost:5000/api"
+  //API:"http://localhost:5000/api"
+  API:"http://165.227.135.69/api"
 };

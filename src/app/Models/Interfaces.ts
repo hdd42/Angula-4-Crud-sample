@@ -1,3 +1,5 @@
+/** Uygulamanin genel veri yapisi*/
+
 export interface IUser{
   _id: string,
   updatedAt: string | Date,

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {Observable} from "rxjs/Observable";
-import {IUser} from "./Models/Interfaces";
+
+/** Uygulama icinde componentler arasi haberlesme icin kullanabilecegimiz servis*/
 
 @Injectable()
 export class MessageService {

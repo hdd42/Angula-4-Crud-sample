@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+/** Yeni HttpClientModule u import ettigimize dikkat edin, eski HttpModulu (hala kullanilabilsede) degil*/
 import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 

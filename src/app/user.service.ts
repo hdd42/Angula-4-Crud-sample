@@ -1,9 +1,12 @@
 import {Inject, Injectable} from '@angular/core';
 import {Observable} from "rxjs/Observable";
 import {IGetResponse, IUser} from "./Models/Interfaces";
+
+/** Angular 4.3 guncellemesi ile artik Http degil HttpClient modulunu kullaniyoruz
+ * Eski modul de hala kullanilabilir, faka bu yeni hali daha kolay ve sade
+ * .map(res => res.json()) cagrisindan kurtuldugumuza dikkat edin@
+ * */
 import {HttpClient, HttpParams} from "@angular/common/http";
-
-
 
 @Injectable()
 export class UserService {
@@ -44,6 +47,7 @@ export class UserService {
 
     return this.http.put(url,user)
   }
+
 
 }
 

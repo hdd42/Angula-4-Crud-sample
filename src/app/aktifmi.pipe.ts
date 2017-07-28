@@ -1,5 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+
+/** Ornek bir 'custom' pipe*/
 @Pipe({
   name: 'aktifmi'
 })

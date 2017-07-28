@@ -4,6 +4,7 @@ import {AnaSayfaComponent} from "./ana-sayfa/ana-sayfa.component";
 import {UserDetailsComponent} from "./user-details/user-details.component";
 import {UserFormComponent} from "./user-form/user-form.component";
 
+/** Routing modulu */
 const routes: Routes = [
   {
     path: '',
